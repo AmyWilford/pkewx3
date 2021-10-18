@@ -1,35 +1,61 @@
 * {
-    margin: 0;
-    padding: 0px;
     font-family: 'Hind Siliguri', sans-serif;
 }
-body {
-    background-color: #9CF7ED;
+.full-page, .table {
+    background-color: black;
+    color: white;
 }
-
 h1{
     font-family: 'Open Sans', sans-serif;
 }
- 
+nav, footer {
+    background-color: #9CF7ED;
+    color: black;
+}
 .head-banner {
-    color: white;
-    background-color: black;
+    background-image: url(resources/pkew-banner.png);
+    background-size: cover;
 }
 .fa {  
    font-size: 20px;
-    padding: 10px;
-    margin: 50px 5px;
+    padding: 5px;
+    margin: 50px 10px;
     text-decoration: none;
-    color: white;
+    color: black;
     border-radius: 50%; 
-    border: 1px solid black;
+    background-color: #9CF7ED;
+    
   }
   .fa:hover {
-    color:#9CF7ED;
-    border: 1px solid #9CF7ED;
+    background-color:black;
+    color: black;
+    color: #9CF7ED;
+}
+.fa-facebook {
+    padding: 5px 9px !important;
 }
 ul {
 list-style: none;
+}
+.video {
+    max-width: 700px;
+    min-width: 200px;
+}
+button {
+    border-radius: 10px;
+    border: none;
+    background-color: #9CF7ED;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    padding: 5px 30px;
+}
+.call-to-action-content {
+    height: 150px;
+    width: 150px;
+    color: black;
+    background-color: #9CF7ED;
+    margin: 20px 5px;
 }
 .soldout {
     color: red;
