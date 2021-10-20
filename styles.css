@@ -4,19 +4,41 @@
 .page-content, .table {
     background-color: black;
     color: white;
+    font-size: 12px;
+}
+nav {
+    text-transform: uppercase;
 }
 h1{
     font-family: 'Open Sans', sans-serif;
-    font-size: 120px;
+    font-size: 7rem;
     text-shadow: 4px 2px #9CF7ED;
     margin-top: 50px;
 }
 h2{
     font-family: 'Permanent Marker', cursive;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.2rem;
     margin-bottom: 30px;
 }
 
+button {
+    text-align: center;
+    background-color: #9CF7ED;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: .10rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+    border:1px solid #9CF7ED;
+}
+button:hover {
+    background-color:black;
+    color:#9CF7ED;
+    border: 1px solid #9CF7ED;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
 nav, footer {
     background-color: #9CF7ED;
     color: #2b2d2f;
@@ -24,6 +46,8 @@ nav, footer {
 .head-banner {
     background-image: url(resources/pkew-banner.png);
     background-size: cover;
+    width: 100%;
+
 }
 .fa {  
    font-size: 20px;
@@ -42,38 +66,45 @@ nav, footer {
 .fa-facebook {
     padding: 5px 9px !important;
 }
-.chevron {
-    padding-top: 40px;
-    width: 60px;
-    animation: fade-slide-up .5s 1s ease-out forwards,
-    pulse 2s 3s ease-out infinite;
-    opacity: 0; 
-}
+
 hr{
     color: 2px solid white;
     opacity: 100%;
-    margin: 20px 120px;
 }
 ul {
 list-style: none;
 }
 .container {
-    padding-top: 40px;
+    padding-top: 30px;
 }
 .video {
     max-width: 700px;
-    min-width: 200px;
 }
 
 .call-to-action-content {
     height: 200px;
-    margin: 20px 20px;
+    padding: 20px 20px;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 30px;
     letter-spacing:0.1em;
+    animation: fade-slide-up .5s 1s ease-out forwards;
+    opacity: 0; 
+    position: relative;
 }
-
+.overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    position: absolute;
+  }
+  
+  .call-to-action-content:hover .overlay {
+    opacity: 1;
+  }
 .accent{
     color:#9CF7ED;
 }
@@ -85,20 +116,17 @@ list-style: none;
 }
 
 .contact-head{
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .contact {
     line-height: 1px;
-    font-size: 12px;
+    font-size: 10px;
 }
 .contact-item {
-    margin: 10px 10px;
+    padding: 10px 10px;
 }
 
-#foot {
-    border-top: 2px solid black;
-}
 footer {
     padding-bottom: 20px;
 }
@@ -114,19 +142,12 @@ footer {
         transform: none;
     }
 }
-@keyframes pulse {
-    0% {
-        opacity: 1;
-        transform: none;
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 5rem;
     }
-    50% {
-        opacity: .8;
-        transform: scale(.8);
-    }
-    100% {
-        opacity: 1;
-        transform: none;
-    }
+
 }
 
 
